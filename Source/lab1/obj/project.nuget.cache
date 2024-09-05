@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "MIy3+WEBO94=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\lab1\\lab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dmitry\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\Dmitry\\.nuget\\packages\\xunit.core\\2.9.0\\xunit.core.2.9.0.nupkg.sha512",
+    "C:\\Users\\Dmitry\\.nuget\\packages\\xunit.extensibility.core\\2.9.0\\xunit.extensibility.core.2.9.0.nupkg.sha512",
+    "C:\\Users\\Dmitry\\.nuget\\packages\\xunit.extensibility.execution\\2.9.0\\xunit.extensibility.execution.2.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
