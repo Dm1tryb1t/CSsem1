@@ -1,0 +1,15 @@
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\bin\Debug\net6.0\sample1.exe
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\bin\Debug\net6.0\sample1.deps.json
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\bin\Debug\net6.0\sample1.runtimeconfig.json
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\bin\Debug\net6.0\sample1.dll
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\bin\Debug\net6.0\sample1.pdb
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.AssemblyInfoInputs.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.AssemblyInfo.cs
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.sourcelink.json
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.dll
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\refint\sample1.dll
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.pdb
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\sample1.genruntimeconfig.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Samples\sample1\obj\Debug\net6.0\ref\sample1.dll
