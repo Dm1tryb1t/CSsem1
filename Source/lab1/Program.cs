@@ -144,6 +144,7 @@ class Figure
     public double PerimeterCalculator()
     {
         double perimeter = 0;
+        if (points[0] == null || points[1] == null) { return 0; }
         perimeter += LengthSide(points[0], points[1]);
         perimeter += LengthSide(points[1], points[2]);
         if (points[3] == null)
