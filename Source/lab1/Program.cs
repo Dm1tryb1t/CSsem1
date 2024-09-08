@@ -112,32 +112,23 @@ class Point
 class Figure
 {
     #region Поля
-    private Point point1;
-    private Point point2;
-    private Point point3;
-    private Point point4;
-    private Point point5;
+    //private Point point1;
+    //private Point point2;
+    //private Point point3;
+    //private Point point4;
+    //private Point point5;
+    private Point[] points;
     #endregion
 
     #region Конструктор
     public Figure(Point pointA, Point pointB, Point pointC, Point pointD, Point pointE)
     {
-        (point1, point2, point3, point4, point5) = (pointA, pointB, pointC, pointD, pointE);
-        if (pointD == null && pointE == null)
-        {
-            Name = "Triangle";
-        }
-        else if (pointE == null)
-        {
-            Name = "Quadrangle";
-        }
-        else
-        {
-            Name = "Pentagon";
-        }
+        points = new Point[] { pointA, pointB, pointC, pointD, pointE };
+        //(point1, point2, point3, point4, point5) = (pointA, pointB, pointC, pointD, pointE);
+        Name = "Pentagon";
     }
-    public Figure(Point pointA, Point pointB, Point pointC, Point pointD) : this(pointA, pointB, pointC, pointD, null) { }
-    public Figure(Point pointA, Point pointB, Point pointC) : this(pointA, pointB, pointC, null, null) { }
+    public Figure(Point pointA, Point pointB, Point pointC, Point pointD) : this(pointA, pointB, pointC, pointD, null) { Name = "Quadrangle"; }
+    public Figure(Point pointA, Point pointB, Point pointC) : this(pointA, pointB, pointC, null, null) { Name = "Triangle"; }
     #endregion
 
     #region Свойства
@@ -147,29 +138,29 @@ class Figure
     #region Методы
     public double LengthSide(Point pointA, Point pointB)
     {
-        //if(pointA == null || pointB == null) { return 0; }
+        if(pointA == null || pointB == null) { return 0; }
         return Math.Pow(Math.Pow(pointA.X - pointB.X, 2) + Math.Pow(pointA.Y - pointB.Y, 2), 0.5);
     }
     public double PerimeterCalculator()
     {
         double perimeter = 0;
-        perimeter += LengthSide(point1, point2);
-        perimeter += LengthSide(point2, point3);
-        if(point4 == null)
+        perimeter += LengthSide(points[0], points[1]);
+        perimeter += LengthSide(points[1], points[2]);
+        if (points[3] == null)
         {
-            perimeter += LengthSide(point3, point1);
+            perimeter += LengthSide(points[2], points[0]);
         }
         else
         {
-            perimeter += LengthSide(point3, point4);
-            if (point5 == null)
+            perimeter += LengthSide(points[2], points[3]);
+            if (points[4] == null)
             {
-                perimeter += LengthSide(point4, point1);
+                perimeter += LengthSide(points[3], points[0]);
             }
             else
             {
-                perimeter += LengthSide(point4, point5);
-                perimeter += LengthSide(point5, point1);
+                perimeter += LengthSide(points[3], points[4]);
+                perimeter += LengthSide(points[4], points[0]);
             }
         }
         return perimeter;
