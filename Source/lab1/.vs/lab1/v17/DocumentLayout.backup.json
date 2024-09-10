@@ -3,8 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD15A28A-25A9-4CD6-9C09-4EF225D5C0A1}|lab1.csproj|c:\\users\\dmitry\\onedrive\\desktop\\cssem1\\source\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD15A28A-25A9-4CD6-9C09-4EF225D5C0A1}|lab1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDEB96A1-0838-4B2A-8120-4D296F0E4C34}|..\\TestProject1\\TestProject1.csproj|c:\\users\\dmitry\\onedrive\\desktop\\cssem1\\source\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B15EA01-AF96-483D-8A75-BE1AC9A1118A}|..\\L1\\L1.csproj|c:\\users\\dmitry\\onedrive\\desktop\\cssem1\\source\\l1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +16,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\lab1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\lab1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAowIIAAABgAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\L1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\L1\\Program.cs",
+              "ToolTip": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\L1\\Program.cs",
+              "RelativeToolTip": "..\\L1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T18:20:04.972Z",
+              "WhenOpened": "2024-09-10T13:49:24.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Dmitry\\OneDrive\\Desktop\\CSsem1\\Source\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAUwHUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T13:44:21.034Z",
               "EditorCaption": ""
             }
           ]

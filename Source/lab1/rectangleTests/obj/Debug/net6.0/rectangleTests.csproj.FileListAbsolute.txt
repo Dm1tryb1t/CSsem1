@@ -1,0 +1,8 @@
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\bin\Debug\net6.0\.msCoverageSourceRootsMapping_rectangleTests
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\bin\Debug\net6.0\CoverletSourceRootsMapping_rectangleTests
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.csproj.AssemblyReference.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.AssemblyInfoInputs.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.AssemblyInfo.cs
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry\OneDrive\Desktop\CSsem1\Source\lab1\rectangleTests\obj\Debug\net6.0\rectangleTests.sourcelink.json
