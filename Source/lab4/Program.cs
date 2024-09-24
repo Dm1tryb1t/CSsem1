@@ -31,18 +31,18 @@ Console.WriteLine("Разность матриц 1-2");
 Console.WriteLine(Raznost);
 
 //перегрузка * для матриц
-MyMatrix multiply = first_matrix * second_matrix;
+MyMatrix lambda = first_matrix * second_matrix;
 Console.WriteLine("Произведение матриц 1*2");
-Console.WriteLine(multiply);
+Console.WriteLine(lambda);
 
 //перегрузка * для числа
 Console.WriteLine("Умножение матриц на числа");
-MyMatrix chislo_multiply_1 = first_matrix * 2;
+MyMatrix chislo_lambda_1 = first_matrix * 2;
 Console.WriteLine("Первая матрица умноженная на 2");
-Console.WriteLine(chislo_multiply_1);
-MyMatrix chislo_multiply_2 = second_matrix * 3;
+Console.WriteLine(chislo_lambda_1);
+MyMatrix chislo_lambda_2 = second_matrix * 3;
 Console.WriteLine("Вторая матрица умноженная на 3");
-Console.WriteLine(chislo_multiply_2);
+Console.WriteLine(chislo_lambda_2);
 
 //перегрузка / на число
 Console.WriteLine("Деление матриц на числа (значения округлены)");
@@ -173,57 +173,57 @@ class MyMatrix
     }
 
     //перегрузка +
-    public static MyMatrix operator +(MyMatrix one, MyMatrix two)
+    public static MyMatrix operator +(MyMatrix lhs, MyMatrix rhs)
     {
-        if ((one.Stroka != two.Stroka) || (one.Stolbec != two.Stolbec))
+        if ((lhs.Stroka != rhs.Stroka) || (lhs.Stolbec != rhs.Stolbec))
         {
             throw new ArgumentException("Размеры матриц должны быть одинаковыми");
         }
 
-        MyMatrix rez = new MyMatrix(one.Stroka, one.Stolbec, 0, 0);
-        for (int i = 0; i < one.Stroka; i++)
+        MyMatrix rez = new MyMatrix(lhs.Stroka, lhs.Stolbec, 0, 0);
+        for (int i = 0; i < lhs.Stroka; i++)
         {
-            for (int j = 0; j < two.Stolbec; j++)
+            for (int j = 0; j < rhs.Stolbec; j++)
             {
-                rez[i, j] = one[i, j] + two[i, j];
+                rez[i, j] = lhs[i, j] + rhs[i, j];
             }
         }
         return rez;
     }
     //перегрузка -
-    public static MyMatrix operator -(MyMatrix one, MyMatrix two)
+    public static MyMatrix operator -(MyMatrix lhs, MyMatrix rhs)
     {
-        if ((one.Stroka != two.Stroka) || (one.Stolbec != two.Stolbec))
+        if ((lhs.Stroka != rhs.Stroka) || (lhs.Stolbec != rhs.Stolbec))
         {
             throw new ArgumentException("Размеры матриц должны быть одинаковыми");
         }
 
-        MyMatrix rez = new MyMatrix(one.Stroka, one.Stolbec, 0, 0);
-        for (int i = 0; i < one.Stroka; i++)
+        MyMatrix rez = new MyMatrix(lhs.Stroka, lhs.Stolbec, 0, 0);
+        for (int i = 0; i < lhs.Stroka; i++)
         {
-            for (int j = 0; j < two.Stolbec; j++)
+            for (int j = 0; j < rhs.Stolbec; j++)
             {
-                rez[i, j] = one[i, j] - two[i, j];
+                rez[i, j] = lhs[i, j] - rhs[i, j];
             }
         }
         return rez;
     }
     //перегрузка * для матриц
-    public static MyMatrix operator *(MyMatrix one, MyMatrix two)
+    public static MyMatrix operator *(MyMatrix lhs, MyMatrix rhs)
     {
-        if (one.Stolbec != two.Stroka)
+        if (lhs.Stolbec != rhs.Stroka)
         {
             throw new ArgumentException("Кол-во столбцов первой матрицы должно быть равно кол-ву строк второй матрицы");
         }
 
-        MyMatrix rez = new MyMatrix(one.Stroka, two.Stolbec, 0, 0);
-        for (int i = 0; i < one.Stroka; i++)
+        MyMatrix rez = new MyMatrix(lhs.Stroka, rhs.Stolbec, 0, 0);
+        for (int i = 0; i < lhs.Stroka; i++)
         {
-            for (int j = 0; j < two.Stolbec; j++)
+            for (int j = 0; j < rhs.Stolbec; j++)
             {
-                for (int k = 0; k < one.Stolbec; k++)
+                for (int k = 0; k < lhs.Stolbec; k++)
                 {
-                    rez[i, j] += one[i, k] * two[k, j];
+                    rez[i, j] += lhs[i, k] * rhs[k, j];
                 }
             }
         }
@@ -231,34 +231,38 @@ class MyMatrix
     }
 
     //перегрузка * для числа
-    public static MyMatrix operator *(MyMatrix one, int multiply)
+    public static MyMatrix operator *(MyMatrix lhs, int lambda)
     {
-        MyMatrix rez = new MyMatrix(one.Stroka, one.Stolbec, 0, 0);
+        MyMatrix rez = new MyMatrix(lhs.Stroka, lhs.Stolbec, 0, 0);
 
-        for (int i = 0; i < one.Stroka; i++)
+        for (int i = 0; i < lhs.Stroka; i++)
         {
-            for (int j = 0; j < one.Stolbec; j++)
+            for (int j = 0; j < lhs.Stolbec; j++)
             {
-                rez[i, j] = one[i, j] * multiply;
+                rez[i, j] = lhs[i, j] * lambda;
             }
         }
         return rez;
     }
+    public static MyMatrix operator *(int lambda, MyMatrix rhs)
+    {
+        return rhs * lambda;
+    }
 
     //перегрузка деления (/)
-    public static MyMatrix operator /(MyMatrix one, int multiply)
+    public static MyMatrix operator /(MyMatrix lhs, int lambda)
     {
-        if (multiply == 0)
+        if (lambda == 0)
         {
             throw new DivideByZeroException("Деление на ноль");
         }
 
-        MyMatrix rez = new MyMatrix(one.Stroka, one.Stolbec, 0, 0);
-        for (int i = 0; i < one.Stroka; i++)
+        MyMatrix rez = new MyMatrix(lhs.Stroka, lhs.Stolbec, 0, 0);
+        for (int i = 0; i < lhs.Stroka; i++)
         {
-            for (int j = 0; j < one.Stolbec; j++)
+            for (int j = 0; j < lhs.Stolbec; j++)
             {
-                rez[i, j] = one[i, j] / multiply;
+                rez[i, j] = lhs[i, j] / lambda;
             }
         }
         return rez;
@@ -296,7 +300,7 @@ class Car
 
     public override string ToString()
     {
-        return $"{Name} {ProductionYear} {MaxSpeed}";
+        return $"Name: {Name}\tProductionYear: {ProductionYear}\tMaxSpeed: {MaxSpeed}";
     }
 
 }

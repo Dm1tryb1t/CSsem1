@@ -27,10 +27,6 @@ catalog.AddCar(new Car ("Car_3", "Engine_3", 3));
 
 for (int i = 0; i < catalog.Cars.Count; i++)
 {
-    Console.WriteLine(catalog.Cars[i].Name);
-}
-for (int i = 0; i < catalog.Cars.Count; i++)
-{
     Console.WriteLine(catalog[0]);
 }
 #endregion
@@ -181,7 +177,7 @@ class Currency
 {
     public double Value { get; set; }
 }
-// ................................................................USD
+
 class CurrencyUSD : Currency
 {
     public static double USDtoRUBExchange { get; set; }
@@ -206,7 +202,7 @@ class CurrencyUSD : Currency
         };
     }
 }
-// ................................................................EUR
+
 class CurrencyEUR : Currency
 {
     public static double EURtoRUBExchange { get; set; }
@@ -231,7 +227,7 @@ class CurrencyEUR : Currency
         };
     }
 }
-// ................................................................RUB
+
 class CurrencyRUB : Currency
 {
     public CurrencyRUB(double value) { Value = value; }
