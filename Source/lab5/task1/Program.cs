@@ -1,25 +1,51 @@
-﻿using System.Numerics;
+﻿Console.Write("Введите количество строк: ");
+int stroka = int.Parse(Console.ReadLine());
 
+Console.Write("Введите количество столбцов: ");
+int stolbec = int.Parse(Console.ReadLine());
 
+Console.Write("Введите минимальное значение элемента: ");
+int minValue = int.Parse(Console.ReadLine());
+
+Console.Write("Введите максимальное значение элемента: ");
+int maxValue = int.Parse(Console.ReadLine());
+
+MyMatrix matrix = new MyMatrix(stroka, stolbec, minValue, maxValue);
+
+Console.WriteLine("Исходная матрица:");
+matrix.Show();
+
+Console.WriteLine("\nИзменение размера матрицы...");
+matrix.ChangeSize(4, 6);
+Console.WriteLine("Измененная матрица:");
+matrix.Show();
+
+Console.WriteLine("\nЧасть матрицы:");
+matrix.ShowPartialy(2, 4, 3, 5);
+
+Console.WriteLine("\nУстановка значения в матрице:");
+matrix[0, 0] = 95;
+matrix.Show();
 
 class MyMatrix
 {
-    public int[,] mx;
+    private int[,] mx;
     public int Stolbec, Stroka;
-    public Random rnd;
+    private Random rnd;
+    private int MinValue, MaxValue;
 
-    public MyMatrix(int stolbec, int stroka, int minValue, int maxValue)
+    public MyMatrix(int stroka, int stolbec, int minValue, int maxValue)
     {
         Stolbec = stolbec;
         Stroka = stroka;
-        mx = new int[Stolbec, Stroka];
+        mx = new int[Stroka, Stolbec];
         rnd = new Random();
-
+        MinValue = minValue; MaxValue = maxValue;
         for (int i = 0; i < Stroka; i++)
         {
             for (int j = 0; j < Stolbec; j++)
             {
-                mx[i, j] = rnd.Next(minValue, maxValue + 1);
+                mx[i, j] = rnd.Next(MinValue, MaxValue + 1);
             }
         }
     }
@@ -34,9 +60,9 @@ class MyMatrix
             }
         }
     }
-    public void ChangeSize(int stolbec, int stroka)
+    public void ChangeSize(int stroka, int stolbec)
     {
-        int[,] newMX = new int[stolbec, stroka];
+        int[,] newMX = new int[stroka, stolbec];
         int i = 0, j = 0;
         int minStolbec = Math.Min(Stolbec, stolbec), minStroka = Math.Min(Stroka, stroka);
         rnd = new Random();
@@ -51,7 +77,7 @@ class MyMatrix
             }
             while (j < stolbec)
             {
-                newMX[i, j] = rnd.Next();
+                newMX[i, j] = rnd.Next(MinValue, MaxValue + 1);
                 ++j;
             }
             ++i;
@@ -61,28 +87,29 @@ class MyMatrix
             j = 0;
             while (j < stolbec)
             {
-                newMX[i, j] = rnd.Next();
+                newMX[i, j] = rnd.Next(MinValue, MaxValue + 1);
                 ++j;
             }
             ++i;
         }
         //(mx, newMX) = (newMX, mx);
         mx = newMX;
+        (Stroka, Stolbec) = (stroka, stolbec);
     }
-    public void ShowPartialy(int beginStolbec, int beginStroka, int endStolbec, int endStroka)
+    public void ShowPartialy(int beginStroka, int beginStolbec, int endStroka, int endStolbec)
     {
         for (int i = beginStroka - 1; i < endStroka; ++i)
         {
             for (int j = beginStolbec - 1; j < endStolbec; ++j)
             {
-                System.Console.Write(mx[i, j] + ' ');
+                Console.Write("{0, 3}", mx[i, j]);
             }
-            System.Console.WriteLine();
+            Console.WriteLine();
         }
     }
     public void Show()
     {
-        ShowPartialy(1, 1, Stolbec, Stroka);
+        ShowPartialy(1, 1, Stroka, Stolbec);
     }
 
     public int this[int i, int j]

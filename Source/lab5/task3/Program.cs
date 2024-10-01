@@ -1,5 +1,23 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
+
+var myDict = new MyDictionary<string, int>(("apple", 5), ("banana", 3), ("orange", 10));
+
+Console.WriteLine($"Размер словаря: {myDict.Size}");
+
+myDict.Add("grape", 7);
+
+Console.WriteLine($"Значение для 'banana': {myDict["banana"]}");
+
+myDict["banana"] = 4;
+Console.WriteLine($"Новое значение для 'banana': {myDict["banana"]}");
+
+Console.WriteLine("Элементы словаря:");
+foreach (/*var*/KeyValuePair<string, int> el in myDict)
+{
+    Console.WriteLine($"{el.Key}:\t{el.Value}");
+}
+
+
 
 class MyDictionary<Tkey, Tvalue> : IEnumerable
 {
@@ -55,9 +73,10 @@ class MyDictionary<Tkey, Tvalue> : IEnumerable
 
     public IEnumerator GetEnumerator()
     {
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < Size; i++)
         {
-            yield return new KeyValuePair<TKey, TValue>(keys[i], values[i]);
+            yield return new KeyValuePair<Tkey, Tvalue>(keys[i], values[i]);
         }
     }
+
 }

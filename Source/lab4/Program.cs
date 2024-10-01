@@ -347,7 +347,7 @@ class CarCatalog : IEnumerable<Car>
     {
         this.cars = cars;
     }
-
+    
 
     // прямой обход
     public IEnumerator<Car> GetEnumerator()
